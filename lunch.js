@@ -14,7 +14,31 @@
  */
 
 function whatToDoForLunch(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  //console.log("I don't know what to do!");
+
+  var toDo;
+
+  switch (hungry) {
+
+    case true:
+
+      if (availableTime < 20) {
+        toDo = "Pick something up from the kitchen and eat in the Lab.";
+      } else if (availableTime > 30) {
+        toDo = "Maybe rethink your time management and work more.";
+      } else {
+        toDo = "Treat yourself and try Gastown!";
+      }
+
+      break;
+
+    case false:
+      toDo = "Get back to work then!";
+
+      break;
+  }
+
+  return toDo;
 }
 
 
@@ -24,16 +48,16 @@ function whatToDoForLunch(hungry, availableTime) {
  */
 
 console.log("I'm hungry and I have 20 minutes for lunch.");
-whatToDoForLunch(true, 20);
+console.log(whatToDoForLunch(true, 20));
 console.log("---");
 
 console.log("I'm hungry and I have 50 minutes for lunch.");
-whatToDoForLunch(true, 50);
+console.log(whatToDoForLunch(true, 50));
 console.log("---");
 
 console.log("I'm not hungry and I have 30 minutes for lunch.");
-whatToDoForLunch(false, 30);
+console.log(whatToDoForLunch(false, 30));
 console.log("---");
 
 console.log("I'm hungry and I have 15 minutes for lunch.");
-whatToDoForLunch(true, 15);
+console.log(whatToDoForLunch(true, 15));
